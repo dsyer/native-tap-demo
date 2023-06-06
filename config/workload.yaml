@@ -9,4 +9,4 @@ spec:
   image: dsyer/app
   env:
     - name: SPRING_APPLICATION_JSON
-      value: '{"management.endpoint.health.probes.add-additional-paths":"true","logging.level.org.springframework.web":"trace"}'
+      value: '{"logging.level.org.springframework.web":"trace"}'

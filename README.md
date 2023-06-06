@@ -25,6 +25,13 @@ Here's what we can learn from the logs with `logging.level.org.springframework.w
 
 * TAP Notes
 
+TAP version:
+
+```
+$ kubectl get pkgi -n tap-install | grep tap.tanzu
+tap                                  tap.tanzu.vmware.com                                  1.6.0-build.6          Reconcile succeeded   27h
+```
+
 Install Zipkin:
 
 ```
@@ -53,7 +60,7 @@ That's actually the only trace when activating my app (scaling up from 0 to 1) a
 Kubelet logs:
 
 ```
-$ for f in `kubectl get nodes -o custom-columns=:.metadata.name`; do kubectl get --raw "/api/v1/nodes/$f/proxy/logs/messages" | grep kubelet; done
+$ for f in `kubectl get nodes -o custom-columns=:.metadata.name`; do kubectl get --raw "/api/v1/nodes/$f/proxy/logs/messages"; done
 ```
 
 | Kubelet Event | Timeline(ms) | Delta(ms)  | Node Event | Application Event |
