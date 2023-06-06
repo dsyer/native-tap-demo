@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-tracing
+  namespace: knative-serving
+data:
+  backend: "zipkin"
+  zipkin-endpoint: "http://zipkin:9411/api/v2/spans"
+  debug: "false"
+  sample-rate: "1.0"

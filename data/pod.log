@@ -1,0 +1,144 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.0)
+
+2023-06-06T04:56:18.895Z  INFO 1 --- [           main] com.example.DemoApplication              : Starting AOT-processed DemoApplication using Java 17.0.7 with PID 1 (/workspace/com.example.DemoApplication started by cnb in /workspace)
+2023-06-06T04:56:18.895Z  INFO 1 --- [           main] com.example.DemoApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-06-06T04:56:18.919Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-06-06T04:56:18.920Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-06T04:56:18.920Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-06T04:56:18.924Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-06T04:56:18.926Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 31 ms
+2023-06-06T04:56:18.955Z DEBUG 1 --- [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2023-06-06T04:56:18.971Z DEBUG 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-06-06T04:56:18.998Z TRACE 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.e.DemoApplication:
+	{GET [/]}: home()
+2023-06-06T04:56:18.999Z TRACE 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2023-06-06T04:56:19.000Z DEBUG 1 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2023-06-06T04:56:19.000Z DEBUG 1 --- [           main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2023-06-06T04:56:19.000Z TRACE 1 --- [           main] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2023-06-06T04:56:19.001Z TRACE 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2023-06-06T04:56:19.001Z TRACE 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-06-06T04:56:19.001Z DEBUG 1 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-06-06T04:56:19.006Z DEBUG 1 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-06-06T04:56:19.019Z  WARN 1 --- [           main] i.m.c.i.binder.jvm.JvmGcMetrics          : GC notifications will not be available because MemoryPoolMXBeans are not provided by the JVM
+2023-06-06T04:56:19.025Z  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-06T04:56:19.031Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-06T04:56:19.032Z  INFO 1 --- [           main] com.example.DemoApplication              : Started DemoApplication in 0.153 seconds (process running for 0.157)
+2023-06-06T04:56:20.051Z  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-06T04:56:20.051Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-06T04:56:20.051Z TRACE 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.multipart.support.StandardServletMultipartResolver@364c64cc
+2023-06-06T04:56:20.051Z TRACE 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@78d01f45
+2023-06-06T04:56:20.051Z TRACE 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.theme.FixedThemeResolver@367a1ca4
+2023-06-06T04:56:20.051Z TRACE 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected DefaultRequestToViewNameTranslator
+2023-06-06T04:56:20.051Z TRACE 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected SessionFlashMapManager
+2023-06-06T04:56:20.051Z DEBUG 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-06-06T04:56:20.051Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-06-06T04:56:20.051Z TRACE 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/readyz", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-06-06T04:56:20.052Z TRACE 1 --- [nio-8080-exec-1] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.connector.RequestFacade@6a9027f5, null]
+2023-06-06T04:56:20.052Z DEBUG 1 --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-06-06T04:56:20.052Z TRACE 1 --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [org.springframework.boot.actuate.health.CompositeHealth@117f0b8b]
+2023-06-06T04:56:20.053Z TRACE 1 --- [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-06-06T04:56:20.053Z TRACE 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-06-06T04:56:20.053Z DEBUG 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-06-06T04:56:20.091Z TRACE 1 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/readyz", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-06-06T04:56:20.091Z TRACE 1 --- [nio-8080-exec-2] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.connector.RequestFacade@3e730546, null]
+2023-06-06T04:56:20.091Z DEBUG 1 --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-06-06T04:56:20.091Z TRACE 1 --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [org.springframework.boot.actuate.health.CompositeHealth@516bb94b]
+2023-06-06T04:56:20.091Z TRACE 1 --- [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-06-06T04:56:20.091Z TRACE 1 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-06-06T04:56:20.091Z DEBUG 1 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-06-06T04:56:20.093Z TRACE 1 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-06-06T04:56:20.093Z TRACE 1 --- [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.DemoApplication#home()
+2023-06-06T04:56:20.093Z TRACE 1 --- [nio-8080-exec-3] o.s.web.method.HandlerMethod             : Arguments: []
+2023-06-06T04:56:20.093Z DEBUG 1 --- [nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2023-06-06T04:56:20.093Z TRACE 1 --- [nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing ["Hello World"]
+2023-06-06T04:56:20.093Z TRACE 1 --- [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-06-06T04:56:20.093Z TRACE 1 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-06-06T04:56:20.093Z DEBUG 1 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-06-06T04:56:20.110Z TRACE 1 --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/actuator", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-06-06T04:56:20.111Z TRACE 1 --- [nio-8080-exec-5] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.connector.RequestFacade@399aae5f, org.apache.catalina.connector.ResponseFacade@1ea5e5ec]
+2023-06-06T04:56:20.111Z DEBUG 1 --- [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-06-06T04:56:20.111Z TRACE 1 --- [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [{_links={self=[Link@18394222 href = 'http://10.244.3.42:8080/actuator'], health=[Link@3cea5099 href = 'http://10.244.3.42:8080/actuator/health'], health-path=[Link@6d1df861 href = 'http://10.244.3.42:8080/actuator/health/{*path}']}}]
+2023-06-06T04:56:20.113Z TRACE 1 --- [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-06-06T04:56:20.113Z TRACE 1 --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-06-06T04:56:20.113Z DEBUG 1 --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-06-06T04:56:20.113Z TRACE 1 --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/actuator", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-06-06T04:56:20.113Z TRACE 1 --- [nio-8080-exec-6] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.connector.RequestFacade@6d34951, org.apache.catalina.connector.ResponseFacade@71bd98dd]
+2023-06-06T04:56:20.114Z DEBUG 1 --- [nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-06-06T04:56:20.114Z TRACE 1 --- [nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [{_links={self=[Link@71f005cd href = 'http://10.244.3.42:8080/actuator'], health=[Link@4c580c9c href = 'http://10.244.3.42:8080/actuator/health'], health-path=[Link@4c768b81 href = 'http://10.244.3.42:8080/actuator/health/{*path}']}}]
+2023-06-06T04:56:20.114Z TRACE 1 --- [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-06-06T04:56:20.114Z TRACE 1 --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-06-06T04:56:20.114Z DEBUG 1 --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-06-06T04:56:20.114Z TRACE 1 --- [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/actuator/health", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-06-06T04:56:20.115Z TRACE 1 --- [nio-8080-exec-7] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.connector.RequestFacade@33819e71, null]
+2023-06-06T04:56:20.115Z DEBUG 1 --- [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-06-06T04:56:20.115Z TRACE 1 --- [nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [org.springframework.boot.actuate.health.SystemHealth@2ba3e8af]
+2023-06-06T04:56:20.115Z TRACE 1 --- [nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-06-06T04:56:20.115Z TRACE 1 --- [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-06-06T04:56:20.115Z DEBUG 1 --- [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-06-06T04:56:20.116Z TRACE 1 --- [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/actuator/UNKNOWN", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-06-06T04:56:20.116Z TRACE 1 --- [nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to HandlerExecutionChain with [ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]] and 3 interceptors
+2023-06-06T04:56:20.116Z DEBUG 1 --- [nio-8080-exec-8] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2023-06-06T04:56:20.116Z TRACE 1 --- [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-06-06T04:56:20.116Z DEBUG 1 --- [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND, headers={masked}
+2023-06-06T04:56:20.116Z TRACE 1 --- [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-06-06T04:56:20.116Z TRACE 1 --- [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+2023-06-06T04:56:20.116Z TRACE 1 --- [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-06-06T04:56:20.117Z TRACE 1 --- [nio-8080-exec-8] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.core.ApplicationHttpRequest@88483b2]
+2023-06-06T04:56:20.117Z DEBUG 1 --- [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-06-06T04:56:20.117Z TRACE 1 --- [nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Tue Jun 06 04:56:20 GMT 2023, status=404, error=Not Found, path=/actuator/UNKNOWN}]
+2023-06-06T04:56:20.117Z TRACE 1 --- [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-06-06T04:56:20.117Z TRACE 1 --- [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-06-06T04:56:20.117Z DEBUG 1 --- [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404, headers={masked}
+2023-06-06T04:56:28.635Z TRACE 1 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/livez", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-06-06T04:56:28.635Z TRACE 1 --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/readyz", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-06-06T04:56:28.635Z TRACE 1 --- [nio-8080-exec-4] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.connector.RequestFacade@35a06d09, null]
+2023-06-06T04:56:28.635Z TRACE 1 --- [io-8080-exec-10] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.connector.RequestFacade@1e8f19c1, null]
+2023-06-06T04:56:28.635Z DEBUG 1 --- [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-06-06T04:56:28.635Z DEBUG 1 --- [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-06-06T04:56:28.635Z TRACE 1 --- [io-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [org.springframework.boot.actuate.health.CompositeHealth@72246ed8]
+2023-06-06T04:56:28.635Z TRACE 1 --- [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [org.springframework.boot.actuate.health.CompositeHealth@7f304928]
+2023-06-06T04:56:28.635Z TRACE 1 --- [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-06-06T04:56:28.635Z TRACE 1 --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-06-06T04:56:28.635Z DEBUG 1 --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-06-06T04:56:28.636Z TRACE 1 --- [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-06-06T04:56:28.636Z TRACE 1 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-06-06T04:56:28.636Z DEBUG 1 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-06-06T04:56:38.635Z TRACE 1 --- [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/livez", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-06-06T04:56:38.636Z TRACE 1 --- [nio-8080-exec-9] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.connector.RequestFacade@1448f2ac, null]
+2023-06-06T04:56:38.636Z DEBUG 1 --- [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-06-06T04:56:38.636Z TRACE 1 --- [nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [org.springframework.boot.actuate.health.CompositeHealth@350365ec]
+2023-06-06T04:56:38.636Z TRACE 1 --- [nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-06-06T04:56:38.636Z TRACE 1 --- [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-06-06T04:56:38.636Z DEBUG 1 --- [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-06-06T04:56:38.636Z TRACE 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/readyz", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-06-06T04:56:38.637Z TRACE 1 --- [nio-8080-exec-1] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.connector.RequestFacade@64a707de, null]
+2023-06-06T04:56:38.637Z DEBUG 1 --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-06-06T04:56:38.637Z TRACE 1 --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [org.springframework.boot.actuate.health.CompositeHealth@7c21b190]
+2023-06-06T04:56:38.637Z TRACE 1 --- [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-06-06T04:56:38.637Z TRACE 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-06-06T04:56:38.637Z DEBUG 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-06-06T04:56:48.635Z TRACE 1 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/livez", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-06-06T04:56:48.635Z TRACE 1 --- [nio-8080-exec-2] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.connector.RequestFacade@77156da4, null]
+2023-06-06T04:56:48.635Z TRACE 1 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/readyz", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-06-06T04:56:48.635Z TRACE 1 --- [nio-8080-exec-3] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.connector.RequestFacade@11f176d0, null]
+2023-06-06T04:56:48.635Z DEBUG 1 --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-06-06T04:56:48.635Z DEBUG 1 --- [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-06-06T04:56:48.635Z TRACE 1 --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [org.springframework.boot.actuate.health.CompositeHealth@46ce5ae6]
+2023-06-06T04:56:48.635Z TRACE 1 --- [nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [org.springframework.boot.actuate.health.CompositeHealth@16a240e7]
+2023-06-06T04:56:48.635Z TRACE 1 --- [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-06-06T04:56:48.635Z TRACE 1 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-06-06T04:56:48.635Z TRACE 1 --- [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-06-06T04:56:48.635Z DEBUG 1 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2023-06-06T04:56:48.636Z TRACE 1 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-06-06T04:56:48.636Z DEBUG 1 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}

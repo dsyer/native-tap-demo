@@ -1,0 +1,37 @@
+# A minimal kubernetes PetClinic with bindings to a local database via a secret. Use this if you don't use TAP and the workload.
+apiVersion: v1
+kind: Service
+metadata:
+  name: zipkin
+  namespace: knative-serving
+spec:
+  ports:
+  - port: 9411
+    targetPort: 9411
+  selector:
+    app: zipkin
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zipkin
+  namespace: knative-serving
+  labels:
+    app: zipkin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zipkin
+  template:
+    metadata:
+      labels:
+        app: zipkin
+    spec:
+      containers:
+        - name: workload
+          image: openzipkin/zipkin
+          ports:
+          - name: http
+            containerPort: 9411
