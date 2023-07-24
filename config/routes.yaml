@@ -1,0 +1,37 @@
+apiVersion: "tanzu.vmware.com/v1"
+kind: SpringCloudGateway
+metadata:
+  name: gateway
+  labels:
+    gateway: gateway
+spec:
+  api:
+    description: "Gateway for the apps"
+---
+apiVersion: "tanzu.vmware.com/v1"
+kind: SpringCloudGatewayRouteConfig
+metadata:
+  name: gateway-routes
+spec:
+  routes:
+    - uri: https://httpbin.org
+      predicates:
+        - Path=/httpbin/get
+      filters:
+        - AddRequestHeader=X-Request-Extra, Hello HTTPBin from Spring Cloud Gateway!
+    - uri: http://openapi-demo
+      predicates:
+        - Path=/app/generated,/app/manual
+      filters:
+        - AddResponseHeader=X-Request-Extra, Hello App from Spring Cloud Gateway!
+
+---
+apiVersion: "tanzu.vmware.com/v1"
+kind: SpringCloudGatewayMapping
+metadata:
+  name: gateway-mapping
+spec:
+  gatewayRef:
+    name: gateway
+  routeConfigRef:
+    name: gateway-routes

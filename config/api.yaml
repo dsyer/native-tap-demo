@@ -1,0 +1,16 @@
+apiVersion: apis.apps.tanzu.vmware.com/v1alpha1
+kind: APIDescriptor
+metadata:
+  labels:
+    apis.apps.tanzu.vmware.com/register-api: "true"
+    app.kubernetes.io/part-of: app
+  name: gateway
+spec:
+  description: gateway
+  location:
+    baseURL:
+      url: http://scg-operator.tap-install
+    path: /openapi
+  owner: default-team
+  system: app
+  type: openapi
