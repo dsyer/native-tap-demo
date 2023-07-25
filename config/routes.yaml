@@ -19,11 +19,23 @@ spec:
         - Path=/httpbin/get
       filters:
         - AddRequestHeader=X-Request-Extra, Hello HTTPBin from Spring Cloud Gateway!
-    - uri: http://openapi-demo
+        - AddResponseHeader=Access-Control-Allow-Origin, *
+        - RemoveJsonAttributesResponseBody=groupId
+        - AddResponseHeader=Content-Security-Policy, upgrade-insecure-requests
+    - uri: http://app.developer-ns
       predicates:
-        - Path=/app/generated,/app/manual
+        - Path=/app
       filters:
-        - AddResponseHeader=X-Request-Extra, Hello App from Spring Cloud Gateway!
+        - AddResponseHeader=Access-Control-Allow-Origin, *
+        - RemoveJsonAttributesResponseBody=groupId
+        - AddResponseHeader=Content-Security-Policy, upgrade-insecure-requests
+    - uri: http://scg-operator.tap-install
+      predicates:
+        - Path=/operator/openapi/{namespace}/{name}
+      filters:
+        - AddResponseHeader=Access-Control-Allow-Origin, *
+        - RemoveJsonAttributesResponseBody=groupId
+        - AddResponseHeader=Content-Security-Policy, upgrade-insecure-requests
 
 ---
 apiVersion: "tanzu.vmware.com/v1"

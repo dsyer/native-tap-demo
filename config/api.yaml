@@ -9,8 +9,9 @@ spec:
   description: gateway
   location:
     baseURL:
-      url: http://scg-operator.tap-install
-    path: /openapi
+      url: https://gateway.tap-choice-bluebird.tapsandbox.com
+    # You need 2.1.0 of the operator for this to work:
+    path: /operator/openapi/developer-ns/gateway
   owner: default-team
   system: app
   type: openapi

@@ -31,6 +31,33 @@ $ kubectl get pkgi -n tap-install | grep tap.tanzu
 tap                                  tap.tanzu.vmware.com                                  1.6.0-build.6          Reconcile succeeded   27h
 ```
 
+### Config Values
+
+If you see references to `tap-values.yml` in the docs, it's here:
+
+```
+$ kubectl get secret tap-values -n tap-install --template='{{index .data "tap-values.yaml"}}' | base64 -d > tap-values.yaml
+```
+
+Sometimes the secret is called something else, e.g. `tap-tap-install-values`, and sometimes the yaml key is different, e.g. `values.yaml`. You can edit that file and apply it to the cluster:
+
+```
+$ tanzu package installed update tap -n tap-install --values-file tap-values.yaml
+```
+
+### Ingress
+
+Check which services are exposed via HTTP ingress (HTTPS if you are lucky):
+
+```
+$ kubectl get httpproxy -A
+NAMESPACE  NAME        FQDN                                          TLS SECRET          STATUS   STATUS DESCRIPTION
+api-portal api-portal  api-portal.tap-choice-bluebird.tapsandbox.com api-portal-tls-cert valid    Valid HTTPProxy
+tap-gui    tap-gui     tap-gui.tap-choice-bluebird.tapsandbox.com    tap-gui-cert        valid    Valid HTTPProxy
+```
+
+### Zipkin
+
 Install Zipkin:
 
 ```
@@ -55,6 +82,22 @@ Go to the Zipkin UI and browse for traces. Here's an example of a trace for a re
 ![Zipkin Trace](images/zipkin.png)
 
 That's actually the only trace when activating my app (scaling up from 0 to 1) and scaling back down to 0. It doesn't tell us much, except that the activator-service agrees with us that it takes 1.3s. There's no detail in the "throttler_try" span (which is the long one). It's just a single event with no details.
+
+### Spring Cloud Gateway
+
+If you want to make changes to the Spring Cloud Gateway operator:
+
+```
+kubectl patch -n tap-install pkgi spring-cloud-gateway --type=merge -p '{"spec":{"paused":true}}'
+```
+
+Then you can edit the deployment directly with `kubectl edit -n tap-install deployment scg-operator`. E.g. you might want to update the images to use the latest snapshot. If you refer to images on Tanzu Net you will also need to [add a secret](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/#create-a-secret-by-providing-credentials-on-the-command-line) to the namespace:
+
+```
+kubectl create secret docker-registry -n tap-install regcred --docker-server=<your-registry-server> --docker-username=<your-name> --docker-password=<your-pword> --docker-email=<your-email>
+```
+
+and refer to that secret ("regcred") in the deployment spec instead of the default.
 
 ### AKS
 
